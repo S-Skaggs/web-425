@@ -1,2 +1,4 @@
-# web-425
-GitHub repository for my Web-425 class.
+# WEB 425 Angular with TypeScript
+## Contributors
+* Professor Richard Krasso 
+* Sheldon Skaggs
