@@ -1,1 +1,128 @@
 /* You can add global styles to this file, and also import other style files */
+/* Import Google Fonts */
+/*
+    Font Notes
+    Artifika is more of a fantasy family font. It should be used for titles, large headers and drop caps
+      first alternate is Papyrus
+    Gentium Book Plus is a serif family font. It should be used for normal headers
+      first alternate is Georgia
+    Encode Sans Semi Condensed is a sans serif family font. It should be used for text
+      first alternate is Verdana
+      second alternate is Helvetica
+*/
+@import url('https://fonts.googleapis.com/css2?family=Artifika&family=Encode+Sans+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* CSS Reset */
+body, header, nav, main, section, footer, img, figure, figcaption, div, ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  height: 100%;
+}
+h1 {
+  font-family: 'Artifika', Papyrus, fantasy;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Gentium Book Plus', Georgia, serif;
+}
+
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+  width: 75%;
+  color: #000;
+  border-right: #c0c0c0 solid 1px;
+  border-left: #c0c0c0 solid 1px;
+  background-color: #fcf3cf;
+  font-family: 'Encode Sans Semi Condensed', Verdana, Helvetica, sans-serif;
+}
+
+.banner {
+  border-bottom: #c0c0c0 solid 2px;
+  background-color: #eedea1;
+  color: #900c3f;
+  text-align: center;
+  font-family: 'Artifika', Papyrus, fantasy;
+  font-size: 2.5em;
+}
+
+.banner-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+.navbar {
+  border-right: #c0c0c0 solid 2px;
+  background-color: #ff5733;
+  color: #ffc300;
+}
+
+.navbar ul {
+  padding: 8px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  padding: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar li:hover {
+  background-color: #ffc300;
+  color: #c70039;
+  cursor: pointer;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  font-family: 'Encode Sans Semi Condensed', Verdana, Helvetica, sans-serif;
+}
+
+.pageHeader {
+  text-align: center;
+  font-size: 2em;
+}
+
+p.dropCap:first-letter {
+  font-family: 'Artifika', Papyrus, fantasy;
+  font-size: 1.5em;
+}
+
+.footer {
+  border-top: #c0c0c0 solid 2px;
+  background-color: #900c3f;
+  color: #daf7a6;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Encode Sans Semi Condensed', Verdana, Helvetica, sans-serif;
+  font-size: .9em;
+}
+
+.footer a {
+  color: #ffc300;
+  text-decoration: none;
+  padding: 8px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
