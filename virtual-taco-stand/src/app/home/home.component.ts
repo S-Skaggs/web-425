@@ -27,7 +27,7 @@ import { Component } from '@angular/core';
           <img src="/assets/Stand.png" alt="image of a taco stand a guy standing there and a customer ordering a taco" />
           <!--give me an item description for a guy standing at the snd selling tacos to customers-->
           <p>
-            Welcome to our vibrant taco stand, where every bite is a fiesta! Join us for an unforgettable culinary journey, crafted by our passionate taco artisans. Dive into the freshest flavors in town, where each taco promises a blend of tradtiona and innovation. Your taste adventure starts here!
+            Welcome to our vibrant taco stand, where every bite is a fiesta! Join us for an unforgettable culinary journey, crafted by our passionate taco artisans. Dive into the freshest flavors in town, where each taco promises a blend of tractional and innovation. Your taste adventure starts here!
           </p>
         </div>
 
