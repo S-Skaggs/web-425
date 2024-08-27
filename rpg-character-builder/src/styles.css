@@ -45,8 +45,8 @@ h2, h3, h4, h5, h6 {
 
 .banner {
   border-bottom: #c0c0c0 solid 2px;
-  background-color: #eedea1;
-  color: #900c3f;
+  background-color: #900c3f;
+  color: #daf7a6;
   text-align: center;
   font-family: 'Artifika', Papyrus, fantasy;
   font-size: 2.5em;
@@ -64,8 +64,8 @@ h2, h3, h4, h5, h6 {
 
 .navbar {
   border-right: #c0c0c0 solid 2px;
-  background-color: #ff5733;
-  color: #ffc300;
+  background-color: #900c3f;
+  color: #eedea1;
 }
 
 .navbar ul {
@@ -81,8 +81,8 @@ h2, h3, h4, h5, h6 {
 }
 
 .navbar li:hover {
-  background-color: #ffc300;
-  color: #c70039;
+  background-color: #eedea1;
+  color: #900c3f;
   cursor: pointer;
 }
 
