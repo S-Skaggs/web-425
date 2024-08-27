@@ -19,6 +19,10 @@ body, header, nav, main, section, footer, img, figure, figcaption, div, ul {
   border: 0;
 }
 
+html {
+  font-size: 100%;
+}
+
 body {
   height: 100%;
 }
@@ -49,7 +53,7 @@ h2, h3, h4, h5, h6 {
   color: #daf7a6;
   text-align: center;
   font-family: 'Artifika', Papyrus, fantasy;
-  font-size: 2.5em;
+  font-size: 2.5rem;
 }
 
 .banner-img {
@@ -99,12 +103,12 @@ h2, h3, h4, h5, h6 {
 
 .pageHeader {
   text-align: center;
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 p.dropCap:first-letter {
   font-family: 'Artifika', Papyrus, fantasy;
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .footer {
@@ -114,7 +118,7 @@ p.dropCap:first-letter {
   text-align: center;
   padding: 20px;
   font-family: 'Encode Sans Semi Condensed', Verdana, Helvetica, sans-serif;
-  font-size: .9em;
+  font-size: .9rem;
 }
 
 .footer a {
