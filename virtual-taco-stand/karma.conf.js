@@ -13,6 +13,7 @@ module.exports = function (config) {
       require('karma-chrome-launcher'),
       require('karma-firefox-launcher'),
       require('karma-opera-launcher'), // to use Opera run npm install karma-opera-launcher --save-dev
+      require('karma-vivaldi-launcher'), // to use Vivaldi run npm install karma-vivaldi-launcher --save-dev
       require('karma-jasmine-html-reporter'),
       require('karma-coverage'),
       require('@angular-devkit/build-angular/plugins/karma')
@@ -38,7 +39,7 @@ module.exports = function (config) {
       ]
     },
     reporters: ['progress', 'kjhtml'],
-    browsers: ['Opera'], // Set to browser of choice that has the plugin installed
+    browsers: ['Vivaldi'], // Set to browser of choice that has the plugin installed
     restartOnFileChange: true
   });
 };
