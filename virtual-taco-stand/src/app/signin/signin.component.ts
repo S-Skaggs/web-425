@@ -28,10 +28,10 @@ import { AuthService } from '../auth.service';
 
           <label for="password">Password</label>
           <input formControlName="password" type="password" id="password" name="password">
-          @if(signinForm.controls['password'].touched && signinForm.controls['password'].hasError('required')) {
-            <small class="error">Password must be at least 9 characters longand contain at least one uppercase letter and one number..</small>
-          }
           @if(signinForm.controls['password'].touched && signinForm.controls['password'].hasError('pattern')) {
+            <small class="error">Password must be at least 9 characters long and contain at least one uppercase letter and one number.</small>
+          }
+          @if(signinForm.controls['password'].touched && signinForm.controls['password'].hasError('required')) {
             <small class="error">Password is required.</small>
           }
           <input type="submit" [disabled]="!signinForm.valid" value="Sign In">
