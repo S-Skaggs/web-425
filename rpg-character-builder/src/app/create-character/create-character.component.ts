@@ -77,17 +77,6 @@ import { CommonModule } from '@angular/common';
         margin-right: 20px;
       }
 
-      fieldset {
-        font-family: 'Artifika', Papyrus, fantasy;
-        font-size: 1.2rem;
-        margin-bottom: 20px;
-      }
-
-      label {
-        font-size: 1rem;
-        font-weight: bold;
-      }
-
       label,
       select,
       .text-input {
@@ -104,7 +93,6 @@ import { CommonModule } from '@angular/common';
 
       select, input[type='text'] {
         width: 33%;
-        font-family: 'Encode Sans Semi Condensed', Verdana, Helvetica, sans-serif;
       }
 
       input[type='submit'] {

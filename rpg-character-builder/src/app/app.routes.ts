@@ -8,7 +8,7 @@ import { CreateCharacterComponent } from './create-character/create-character.co
 import { CreateGuildComponent } from './create-guild/create-guild.component';
 import { PlayersComponent } from './players/players.component';
 import { SigninComponent } from './signin/signin.component';
-
+import { authGuard } from './auth.guard';
 
 export const routes: Routes = [
   {
@@ -37,7 +37,8 @@ export const routes: Routes = [
   },
   {
     path: 'create-character',
-    component: CreateCharacterComponent
+    component: CreateCharacterComponent,
+    canActivate: [authGuard]
   },
   {
     path: 'create-guild',

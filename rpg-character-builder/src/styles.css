@@ -9,8 +9,9 @@
     Encode Sans Semi Condensed is a sans serif family font. It should be used for text
       first alternate is Verdana
       second alternate is Helvetica
+    DM Mono is a sans serif mono font. It should be used for error messages
 */
-@import url('https://fonts.googleapis.com/css2?family=Artifika&family=Encode+Sans+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Artifika&family=Encode+Sans+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 
 /* CSS Reset */
 body, header, nav, main, section, footer, img, figure, figcaption, div, ul {
@@ -111,6 +112,29 @@ p.dropCap:first-letter {
   font-size: 1.5rem;
 }
 
+/* Styling related to forms */
+fieldset {
+  font-family: 'Artifika', Papyrus, fantasy;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+input {
+  font-family: 'Encode Sans Semi Condensed', Verdana, Helvetica, sans-serif;
+}
+
+.formError {
+  color: #ff0000;
+  padding: 5px;
+  font-family: "DM Mono", monospace;
+}
+
+/* Styling for the footer*/
 .footer {
   border-top: #c0c0c0 solid 2px;
   background-color: #900c3f;
