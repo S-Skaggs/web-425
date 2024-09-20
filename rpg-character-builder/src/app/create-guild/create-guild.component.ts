@@ -108,8 +108,8 @@ export class CreateGuildComponent {
     guildName: [null, Validators.compose([Validators.required])],
     description: [null, Validators.compose([Validators.required])],
     type: [null, Validators.compose([Validators.required])],
-    acceptTerms: [null, Validators.compose([Validators.required])],
-    notificationPreference: [false, Validators.compose([Validators.required])]
+    acceptTerms: [false, Validators.compose([Validators.requiredTrue])],
+    notificationPreference: [null, Validators.compose([Validators.required])]
   });
 
   constructor(private formBuilder: FormBuilder){}

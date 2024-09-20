@@ -39,30 +39,24 @@ describe('CreateGuildComponent', () => {
     component.guildForm.controls['guildName'].setValue('Test Guild');
     component.guildForm.controls['description'].setValue('A guild for testing.');
     component.guildForm.controls['type'].setValue('Educational');
-    component.guildForm.controls['acceptTerms'].setValue('true');
+    component.guildForm.controls['acceptTerms'].setValue(true);
     component.guildForm.controls['notificationPreference'].setValue('Email');
 
     // Test validity
     expect(component.guildForm.valid).toBeTruthy();
   });
 
-  // Verify accept terms is checked
-  it('should indicate the acceptTerms checkbox is checked', () => {
-    // Set value
-    component.guildForm.controls['acceptTerms'].setValue('true');
+  // Verify form is invalid when acceptTerms is false (not checked)
+  it('should indicate invalid when acceptTerms is false (not checked)', () => {
+    // Provide data for required fields
+    component.guildForm.controls['guildName'].setValue('Test Guild');
+    component.guildForm.controls['description'].setValue('A guild for testing.');
+    component.guildForm.controls['type'].setValue('Educational');
+    component.guildForm.controls['acceptTerms'].setValue(false);
+    component.guildForm.controls['notificationPreference'].setValue('Email');
 
-    // Get a reference to the element
-    const cbAcceptTerms = fixture.debugElement.query(By.css('checkbox'));
-
-    expect(cbAcceptTerms.attributes['checked']).toBeTruthy();
-  });
-
-  // Verify accept terms is not checked
-  it('should indicate the acceptTerms checkbox is not checked', () => {
-    // Get a reference to the element
-    const cbAcceptTerms = fixture.debugElement.query(By.css('checkbox'));
-
-    expect(cbAcceptTerms.attributes['checked']).toBeFalsy();
+    // Test validity
+    expect(component.guildForm.valid).toBeFalsy();
   });
 
   // Verify valid form can be submitted
@@ -74,7 +68,7 @@ describe('CreateGuildComponent', () => {
     component.guildForm.controls['guildName'].setValue('Test Guild');
     component.guildForm.controls['description'].setValue('A guild for testing.');
     component.guildForm.controls['type'].setValue('Educational');
-    component.guildForm.controls['acceptTerms'].setValue('true');
+    component.guildForm.controls['acceptTerms'].setValue(true);
     component.guildForm.controls['notificationPreference'].setValue('Email');
 
     fixture.detectChanges();
