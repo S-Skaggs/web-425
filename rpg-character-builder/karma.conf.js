@@ -39,7 +39,7 @@ module.exports = function (config) {
       ]
     },
     reporters: ['progress', 'kjhtml'],
-    browsers: ['Firefox'],
+    browsers: ['Vivaldi'],
     restartOnFileChange: true
   });
 };
