@@ -10,14 +10,15 @@ export interface Roster {
   rosterId: number;
 }
 
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { CharacterListComponent } from '../character-list/character-list.component';
 
 @Component({
   selector: 'app-create-character',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, CharacterListComponent],
   template: `
     <div class="creation-form-container">
       <form class="character-creation-form" #characterCreationForm="ngForm" (ngSubmit)="createCharacter();">
@@ -48,21 +49,7 @@ import { CommonModule } from '@angular/common';
       </form>
     </div>
 
-    @if(this.roster.characters.length > 0) {
-        <div class="roster-container">
-          <h1>Character Roster</h1>
-          <section class="character-roster">
-            @for (character of this.roster.characters; track character) {
-              <div class="character-display">
-                <p>Name: {{ character.name }}</p>
-                <p>Gender: {{ character.gender }}</p>
-                <p>Class {{ character.class }}</p>
-                <div class="rosterCharacterId">roster: {{ this.roster.rosterId }} character: {{ character.id }}</div>
-              </div>
-            }
-          </section>
-        </div>
-      }
+    <app-character-list [roster]='roster'></app-character-list>
   `,
   styles: [
     `
@@ -99,28 +86,6 @@ import { CommonModule } from '@angular/common';
         float: right;
         border-radius: 8px;
         cursor: pointer;
-      }
-
-      .character-roster {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        gap: 20px;
-      }
-
-      .character-display {
-        border: 4px double #228b22;
-        border-radius: 8px;
-        background-color: #f5f5f5;
-        padding: 0 5px 5px;
-        text-align: left;
-        flex: 0 1 calc(33.333% - 20px);
-        box-sizing: border-box;
-      }
-
-      .rosterCharacterId {
-        font-size: .6rem;
       }
     `
   ]

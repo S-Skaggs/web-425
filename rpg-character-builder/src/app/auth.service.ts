@@ -21,8 +21,9 @@ export class AuthService {
     this.users = [
       { userId: 90125, email: 'yes@music.com', password: 'LeaveIt_1984' },
       { userId: 1984, email: 'van.halen@music.com', password: '19Panama84' },
-      { userId: 2112, email: 'rush@hogwarts.com', password: '67ZoneTwilight91' },
-      { userId: 1010, email: 'prince@hogwarts.com', password: 'Delirious1983' }
+      { userId: 2112, email: 'rush@music.com', password: '67ZoneTwilight91' },
+      { userId: 1010, email: 'prince@music.com', password: 'Delirious1983' },
+      { userId: 1812, email: 'test@test.com', password: 'P@ssw0rd' }
     ];
   }
 

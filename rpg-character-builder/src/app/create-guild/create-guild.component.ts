@@ -9,11 +9,12 @@ export interface GuildInformation {
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, FormArray, ReactiveFormsModule } from '@angular/forms';
+import { GuildListComponent } from "../guild-list/guild-list.component";
 
 @Component({
   selector: 'app-create-guild',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],
+  imports: [ReactiveFormsModule, CommonModule, GuildListComponent],
   template: `
     <div class="form-container">
       <form [formGroup]="guildForm" class="guild-form" (ngSubmit)="createGuild(); guildForm.reset();">
@@ -49,21 +50,7 @@ import { FormBuilder, FormGroup, Validators, FormArray, ReactiveFormsModule } fr
       </form>
 
       <div class="savedGuilds">
-        <h1>Current Guilds</h1>
-        <div class="savedGuilds-container">
-          @for(guild of savedGuilds; track guild) {
-            <fieldset class="guildCard">
-              <legend>{{ guild.guildName }}</legend>
-              <div class="displayGuild">
-                <h4 class="displayInlineInfo">Type: </h4>
-                <p class="displayInlineInfo">{{ guild.type }}</p>
-                <h4 class="tightenDisplay">Description:</h4>
-                <p class="tightenDisplay">{{ guild.description }}</p>
-                <p class="displayTechnical">Notification preference {{ guild.notificationPreference }} Accepted terms {{ guild.acceptTerms }}</p>
-              </div>
-            </fieldset>
-          }
-        </div>
+        <app-guild-list [savedGuilds]='savedGuilds'></app-guild-list>
       </div>
     </div>
   `,
@@ -120,51 +107,6 @@ import { FormBuilder, FormGroup, Validators, FormArray, ReactiveFormsModule } fr
     input[type=text] {
       width: 25%;
     }
-
-    .savedGuilds-container {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .guild-card {
-      box-sizing: border-box;
-      border-radius: 5px;
-      padding: 20px;
-      margin: 10px 0;
-      box-shadow: 0 2px 4 px rgba(0, 0, 0, 0.1);
-    }
-
-    .displayGuild {
-      font-family: 'Encode Sans Semi Condensed', Verdana, Helvetica, sans-serif;
-    }
-
-    .savedGuilds-container fieldset:nth-child(odd) {
-      background-color: #fdf5e6;
-      padding: 5px 10px 15px;
-      border-radius: 10px;
-    }
-
-    .savedGuilds-container fieldset:nth-child(even) {
-      background-color: #ffefd5;
-      padding: 5px 10px 15px;
-      border-radius: 10px;
-    }
-
-    .tightenDisplay {
-      margin: 10px 0 0;
-    }
-
-    .displayInlineInfo {
-      display: inline;
-    }
-
-    .displayTechnical {
-      font-size: .6rem;
-      float: right;
-    }
   `
 })
 export class CreateGuildComponent {
@@ -190,6 +132,9 @@ export class CreateGuildComponent {
         notificationPreference: ''
     };
 
+    /*
+    Remove hard coded list of saved guilds
+
     this.savedGuilds = [
       {
         guildName: 'Disciples of Chaos',
@@ -213,6 +158,9 @@ export class CreateGuildComponent {
         notificationPreference: 'Email'
       }
     ];
+    */
+
+    this.savedGuilds = [];
   }
 
   createGuild() {
