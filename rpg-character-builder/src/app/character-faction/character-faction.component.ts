@@ -39,9 +39,9 @@ import { HttpClient } from '@angular/common/http';
     }
 
     .faction-display {
-      border: 4px double #228b22;
+      border: 4px double #b22222;
       border-radius: 8px;
-      background-color: #f5f5f5;
+      background-image: linear-gradient(135deg, #fff, #fcfcfc, #ff4040);
       padding: 0 5px 5px;
       text-align: left;
       flex: 0 1 calc(33.333% - 20px);
